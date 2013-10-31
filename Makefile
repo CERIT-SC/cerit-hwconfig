@@ -12,5 +12,11 @@ endef
 fineus%.cerit-sc.cz:
 	@$(call hprcu,bios/fineus.cerit-sc.cz.xml,$@)
 
+hdb%.cerit-sc.cz:
+	@$(call hprcu,bios/hdb.cerit-sc.cz.xml,$@)
+
+hdc%.cerit-sc.cz:
+	@$(call hprcu,bios/hdc.cerit-sc.cz.xml,$@)
+
 all: $(FQDN)
 	@echo 'What could be done, was done ...'

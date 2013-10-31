@@ -4,7 +4,7 @@ Repository contains (default) configurations for various
 components in CERIT-SC\'s infrastructure.
 
 ## BIOS
-## IPMI (iLO/IMM)
+## IPMI (iLO, IMM)
 ## Switches
 
 ***
