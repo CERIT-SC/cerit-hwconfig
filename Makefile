@@ -10,7 +10,7 @@ endef
 #####
 
 fineus%.cerit-sc.cz:
-	@$(call hprcu,bios/fineus.cerit-sc.cz.xml.m4,$@)
+	@$(call hprcu,bios/fineus.cerit-sc.cz.xml,$@)
 
 all: $(FQDN)
 	@echo 'What could be done, was done ...'
