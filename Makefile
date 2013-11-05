@@ -18,8 +18,6 @@ util/hprcu:
 
 util: util/hprcu
 
-clean:
-	rm -f util/*
 
 #####
 
@@ -31,6 +29,11 @@ hdb%.cerit-sc.cz: util/hprcu
 
 hdc%.cerit-sc.cz: util/hprcu
 	@$(call hprcu,bios/hdc.cerit-sc.cz.xml,$@)
+
+clean:
+	rm -f util/*
+
+test: util
 
 all: $(FQDN)
 	@echo 'What could be done, was done ...'

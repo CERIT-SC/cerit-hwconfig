@@ -1,5 +1,5 @@
 language: c
-script: "make util"
+script: "make test"
 notifications:
   email:
     - holer@ics.muni.cz
