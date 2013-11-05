@@ -14,7 +14,9 @@ endef
 
 util/hprcu:
 	mkdir -p util/
-	curl "${URL_HPST}" | tar -C util/ --strip-components=2 --no-anchored -xzvf - hprcu
+	curl "${URL_HPST}" | tar -C util/ --strip-components=2 \
+		--occurrence=1 --no-anchored -xzvf - hprcu
+	@echo "Download OK: $@"
 
 util: util/hprcu
 
