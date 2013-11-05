@@ -13,9 +13,13 @@ endef
 ##### Utils
 
 util/hprcu:
+	mkdir -p util/
 	curl "${URL_HPST}" | tar -C util/ --strip-components=2 --no-anchored -xzvf - hprcu
 
 util: util/hprcu
+
+clean:
+	rm -f util/*
 
 #####
 
