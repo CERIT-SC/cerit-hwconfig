@@ -1,0 +1,69 @@
+SET CONFIG Advanced Memory Protection Advanced ECC Support
+SET CONFIG NUMLOCK Power-On State Off
+SET CONFIG Embedded Serial Port COM 1; IRQ4; IO: 3F8h-3FFh
+SET CONFIG Virtual Serial Port COM 2; IRQ3; IO: 2F8h-2FFh
+SET CONFIG USB Control USB Enabled
+SET CONFIG USB 2.0 Controller Enabled
+SET CONFIG Removable Flash Media Boot Sequence External DriveKeys First
+SET CONFIG ASR Status Enabled
+SET CONFIG ASR Timeout 10 Minutes
+SET CONFIG Thermal Shutdown Enabled
+SET CONFIG Wake-On LAN Enabled
+SET CONFIG POST F1 Prompt Delayed
+SET CONFIG Power Button Enabled
+SET CONFIG Automatic Power-On Disabled
+SET CONFIG Power-On Delay Random Delay
+SET CONFIG BIOS Serial Console Port Auto
+SET CONFIG BIOS Serial Console Baud Rate 9600
+SET CONFIG EMS Console Disabled
+SET CONFIG BIOS Interface Mode Command-Line
+SET CONFIG No-Execute Memory Protection Enabled
+SET CONFIG Intel(R) Virtualization Technology Enabled
+SET CONFIG Intel(R) Hyperthreading Options Disabled
+SET CONFIG Processor Core Disable All Cores Enabled
+SET NUMBER Enhanced Processor Core Disable (Intel Core Select) 0
+SET CONFIG Intel(R) Turbo Boost Technology Enabled
+SET CONFIG Intel(R) VT-d Enabled
+SET CONFIG NIC 1 Boot Options Network Boot
+SET CONFIG NIC 2 Boot Options Disabled
+SET CONFIG NIC 3 Boot Options Disabled
+SET CONFIG NIC 4 Boot Options Disabled
+SET CONFIG Option ROM Loading Sequence Load Embedded Devices First
+SET CONFIG MPS Table Mode Full Table APIC
+SET CONFIG ROM Selection Use Current ROM
+SET CONFIG NMI Debug Button Enabled
+SET CONFIG Virtual Install Disk Disabled
+SET CONFIG PCI Bus Padding Options Enabled
+SET CONFIG Memory Mapped I/O Options 2GB of Memory Mapped I/O
+SET CONFIG Address Mode 44-bit Disabled
+SET CONFIG Power-On Logo Disabled
+SET CONFIG Hide Option ROM Messages Disabled
+SET CONFIG x2APIC Options Disabled
+SET CONFIG SR-IOV Enabled
+SET CONFIG HW Prefetcher Enabled
+SET CONFIG Adjacent Sector Prefetch Enabled
+SET CONFIG DCU Prefetcher Enabled
+SET CONFIG Video Options Optional Video Primary, Embedded Video Disabled
+SET CONFIG Thermal Configuration Optimal Cooling
+SET CONFIG Drive Write Cache Enabled
+SET CONFIG Asset Tag Protection Unlocked
+SET CONFIG Power Requirements Override Disabled
+SET CONFIG HP Power Profile Maximum Performance
+SET CONFIG HP Power Regulator HP Static High Performance Mode
+SET CONFIG Redundant Power Supply Mode High Efficiency Mode (Auto)
+SET CONFIG Minimum Processor Idle Power Core State No C-states
+SET CONFIG Minimum Processor Idle Power Package State No Package State
+SET CONFIG Maximum Memory Bus Frequency Auto
+SET CONFIG Memory Power Capping Disabled
+SET CONFIG PCI Express Generation 2.0 Support Auto
+SET CONFIG Dynamic Power Savings Mode Response Fast
+SET CONFIG Collaborative Power Control Disabled
+SET CONFIG DIMM Idle Power Saving Mode Disabled
+SET IPL C: 4
+SET IPL A: 2
+SET IPL CD 1
+SET IPL PXE 5
+SET IPL USB 3
+SET BOOT 01 45323C10 00 03 00 00 
+SET BOOT 02 0D333C10 00 00 1F 02 
+SET BOOT 03 49323C10 09 0B 00 00 
