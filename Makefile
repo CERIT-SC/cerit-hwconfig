@@ -3,6 +3,10 @@ FQDN=$(shell hostname -f)
 # HP Scripting Toolkit for Linux 9.50
 URL_HPST=https://ftp.hp.com/pub/softlib2/software1/pubsw-linux/p1221080004/v84368/hp-scripting-toolkit-linux-9.50.tar.gz
 
+# IBM Advanced Settings Utility 9.63
+#URL_ASU=https://delivery04.dhe.ibm.com/sar/CMA/XSA/04sjw/0/ibm_utl_asu_asut86d-9.63_linux_i386.tgz
+URL_ASU=https://delivery04.dhe.ibm.com/sar/CMA/XSA/04sjz/0/ibm_utl_asu_asut86d-9.63_linux_x86-64.tgz
+
 define hprcu
 	DEF=`mktemp` && \
 	m4 -D_SERVER_NAME_=$2 $1 | tee $$DEF && \
@@ -18,7 +22,14 @@ util/hprcu:
 		--occurrence=1 --no-anchored -xzvf - hprcu
 	@echo "Download OK: $@"
 
-util: util/hprcu
+util/asu64:
+	mkdir -p util/
+	curl "${URL_ASU}" | tar -C util/ \
+		--occurrence=1 --no-anchored -xzv \
+		asu64
+	@echo "Download OK: $@"
+
+util: util/hprcu util/asu64
 
 
 #####
