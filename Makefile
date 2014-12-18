@@ -46,7 +46,7 @@ hdc%.cerit-sc.cz: util/hprcu
 # old HP ProLiant DL980 *G7* requires obsolete 'conrep' tool
 zewura1.cerit-sc.cz zewura2.cerit-sc.cz zewura3.cerit-sc.cz\
 zewura4.cerit-sc.cz zewura5.cerit-sc.cz zewura6.cerit-sc.cz\
-zewura7.cerit-sc.cz zewura8.cerit-sc.cz: bios/hp_zewura.cerit-sc.cz.rbsu
+zewura7.cerit-sc.cz zewura8.cerit-sc.cz: bios/zewura.cerit-sc.cz.rbsu
 	@echo 'BIOS setup is manuall process, use BIOS RBSU'
 	@exit 1
 
