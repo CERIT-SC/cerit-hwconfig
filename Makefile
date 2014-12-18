@@ -14,7 +14,16 @@ define hprcu
 	unlink $$DEF
 endef
 
-##### Utils
+
+all: $(FQDN)
+	@echo 'What could be done, was done ...'
+
+test: util
+
+clean:
+	rm -f util/*
+
+### Utils
 
 util/hprcu:
 	mkdir -p util/
@@ -31,8 +40,7 @@ util/asu64:
 
 util: util/hprcu util/asu64
 
-
-#####
+### Machines
 
 fineus%.cerit-sc.cz: util/hprcu
 	@$(call hprcu,bios/fineus.cerit-sc.cz.xml,$@)
@@ -49,11 +57,3 @@ zewura4.cerit-sc.cz zewura5.cerit-sc.cz zewura6.cerit-sc.cz\
 zewura7.cerit-sc.cz zewura8.cerit-sc.cz: bios/zewura.cerit-sc.cz.rbsu
 	@echo 'BIOS setup is manuall process, use BIOS RBSU'
 	@exit 1
-
-clean:
-	rm -f util/*
-
-test: util
-
-all: $(FQDN)
-	@echo 'What could be done, was done ...'
