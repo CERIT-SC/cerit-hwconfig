@@ -15,7 +15,18 @@ D_DRAC_PSWD=root
 
 -include config.mk
 
-###
+all: $(FQDN)
+	@echo 'What could be done, was done ...'
+
+%: %.ipmi %.bios
+	@echo 'Done'
+
+test: util
+
+clean:
+	rm -f util/*
+
+### Utils
 
 define hprcu
 	DEF=`mktemp` && \
@@ -37,19 +48,6 @@ define asu
 		--password ${IPMI_PSWD}
 endef
 
-all: $(FQDN)
-	@echo 'What could be done, was done ...'
-
-%: %.ipmi %.bios
-	@echo 'Done'
-
-test: util
-
-clean:
-	rm -f util/*
-
-### Utils
-
 util/hprcu:
 	mkdir -p util/
 	curl "${URL_HPST}" | tar -C util/ --strip-components=2 \
@@ -67,14 +65,32 @@ util: util/hprcu util/asu64
 
 ### Machines
 
-fineus%.cerit-sc.cz: util/hprcu
+# fineus
+fineus%.cerit-sc.cz.ipmi:
+	@echo 'iLO setup TODO'
+	@exit 1
+
+fineus%.cerit-sc.cz.bios: util/hprcu
 	@$(call hprcu,bios/fineus.cerit-sc.cz.xml,$@)
 
-hdb%.cerit-sc.cz: util/hprcu
+
+# hdb
+hdb%.cerit-sc.cz.ipmi:
+	@echo 'iLO setup TODO'
+	@exit 1
+
+hdb%.cerit-sc.cz.bios: util/hprcu
 	@$(call hprcu,bios/hdb.cerit-sc.cz.xml,$@)
 
-hdc%.cerit-sc.cz: util/hprcu
+
+# hdc
+hdc%.cerit-sc.cz.ipmi:
+	@echo 'iLO setup TODO'
+	@exit 1
+
+hdc%.cerit-sc.cz.bios: util/hprcu
 	@$(call hprcu,bios/hdc.cerit-sc.cz.xml,$@)
+
 
 # zebra
 zebra%.cerit-sc.cz.ipmi:
@@ -86,6 +102,7 @@ zebra%.cerit-sc.cz.ipmi:
 zebra%.cerit-sc.cz.bios: util/asu64
 	$(call asu,bios/zebra.cerit-sc.cz.asu,c-zebra$*a.priv.cerit-sc.cz)
 	$(call asu,bios/zebra.cerit-sc.cz.asu,c-zebra$*b.priv.cerit-sc.cz)
+
 
 # zewura, requires obsolete 'conrep' tool
 zewura%.cerit-sc.cz.ipmi:
