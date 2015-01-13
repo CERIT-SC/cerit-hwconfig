@@ -31,4 +31,3 @@ set uEFI.Com2FlowControl "Hardware"
 set uEFI.EnergyManager "Disable"
 set uEFI.PerformanceStates "Disable"
 set uEFI.QPISpeed "Max Performance"
-
