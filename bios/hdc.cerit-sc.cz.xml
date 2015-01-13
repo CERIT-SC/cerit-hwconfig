@@ -1,1 +1,509 @@
-hdb.cerit-sc.cz.xml
+<hprcu version='1.11' xml_version='1.10'>
+  <informational>
+    <product_name>ProLiant DL360p Gen8</product_name>
+    <system_rom_family>P71</system_rom_family>
+  </informational>
+    <feature feature_id='23' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Embedded Serial Port</feature_name>
+      <option option_id='1'><option_name>COM 1; IRQ4; IO: 3F8h-3FFh</option_name></option>
+      <option option_id='2'><option_name>COM 2; IRQ3; IO: 2F8h-2FFh</option_name></option>
+      <option option_id='3'><option_name>COM 3; IRQ5; IO: 3E8h-3EFh</option_name></option>
+      <option option_id='4'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='85' selected_option_id='2' sys_default_option_id='2' feature_type='option'>
+      <feature_name>Virtual Serial Port</feature_name>
+      <option option_id='1'><option_name>COM 1; IRQ4; IO: 3F8h-3FFh</option_name></option>
+      <option option_id='2'><option_name>COM 2; IRQ3; IO: 2F8h-2FFh</option_name></option>
+      <option option_id='3'><option_name>COM 3; IRQ5; IO: 3E8h-3EFh</option_name></option>
+      <option option_id='4'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='167' selected_option_id='3' sys_default_option_id='2' feature_type='option'>
+      <feature_name>NIC 1 Boot Options</feature_name>
+      <option option_id='2'><option_name>Network Boot</option_name></option>
+      <option option_id='3'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='64' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Advanced Memory Protection</feature_name>
+      <option option_id='1'><option_name>Advanced ECC Support</option_name></option>
+      <option option_id='2'><option_name>Online Spare with Advanced ECC Support</option_name></option>
+    </feature>
+    <feature feature_id='67' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>USB Control</feature_name>
+      <option option_id='1'><option_name>USB Enabled</option_name></option>
+      <option option_id='2'><option_name>External USB Ports Disabled</option_name></option>
+    </feature>
+    <feature feature_id='248' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>USB Boot Support</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='251' selected_option_id='3' sys_default_option_id='3' feature_type='option'>
+      <feature_name>Removable Flash Media Boot Sequence</feature_name>
+      <option option_id='1'><option_name>Internal SD Card First</option_name></option>
+      <option option_id='2'><option_name>Internal DriveKeys First</option_name></option>
+      <option option_id='3'><option_name>External DriveKeys First</option_name></option>
+    </feature>
+    <feature feature_id='135' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>No-Execute Memory Protection</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='158' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Intel(R) Virtualization Technology</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='176' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Intel(R) Hyperthreading Options</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='177' feature_type='number'>
+      <feature_name>Processor Core Disable (Intel Core Select)</feature_name>
+      <feature_value>0</feature_value>
+      <feature_value_sys_default>0</feature_value_sys_default>
+    </feature>
+    <feature feature_id='181' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Intel(R) Turbo Boost Technology</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='186' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Intel(R) VT-d</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='16' selected_option_id='2' sys_default_option_id='2' feature_type='option'>
+      <feature_name>NUMLOCK Power-On State</feature_name>
+      <option option_id='1'><option_name>On</option_name></option>
+      <option option_id='2'><option_name>Off</option_name></option>
+    </feature>
+    <feature feature_id='141' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Embedded SATA Configuration</feature_name>
+      <option option_id='1'><option_name>Enable SATA Legacy Support</option_name></option>
+      <option option_id='2'><option_name>Enable SATA AHCI Support</option_name></option>
+    </feature>
+    <feature feature_id='58' selected_option_id='1' sys_default_option_id='2' feature_type='option'>
+      <feature_name>Drive Write Cache</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='20' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>MPS Table Mode</feature_name>
+      <option option_id='1'><option_name>Full Table APIC</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='29' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>ROM Selection</feature_name>
+      <option option_id='1'><option_name>Use Current ROM</option_name></option>
+      <option option_id='2'><option_name>Switch to Backup ROM</option_name></option>
+    </feature>
+    <feature feature_id='86' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>NMI Debug Button</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='134' selected_option_id='2' sys_default_option_id='2' feature_type='option'>
+      <feature_name>Virtual Install Disk</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='203' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>PCI Bus Padding Options</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='69' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Power-On Logo</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='286' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>F11 Boot Menu Prompt</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='310' selected_option_id='3' sys_default_option_id='3' feature_type='option'>
+      <feature_name>Consistent Device Naming</feature_name>
+      <option option_id='2'><option_name>CDN Support for LOMs Only</option_name></option>
+      <option option_id='3'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='313' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Network Boot Retry Support</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='320' selected_option_id='1' sys_default_option_id='2' feature_type='option'>
+      <feature_name>Reset on Boot Device Not Found</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='321' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>HP Option ROM Prompting</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='180' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Video Options</feature_name>
+      <option option_id='1'><option_name>Optional Video Primary, Embedded Video Disabled</option_name></option>
+      <option option_id='2'><option_name>Optional Video Primary, Embedded Video Secondary</option_name></option>
+      <option option_id='3'><option_name>Embedded Video Primary, Optional Video Secondary</option_name></option>
+    </feature>
+    <feature feature_id='142' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Thermal Configuration</feature_name>
+      <option option_id='1'><option_name>Optimal Cooling</option_name></option>
+      <option option_id='2'><option_name>Increased Cooling</option_name></option>
+      <option option_id='3'><option_name>Maximum Cooling</option_name></option>
+    </feature>
+    <feature feature_id='138' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>HW Prefetcher</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='139' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Adjacent Sector Prefetch</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='260' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>DCU Streamer Prefetcher</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='262' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>DCU IP Prefetcher</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='155' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Node Interleaving</feature_name>
+      <option option_id='1'><option_name>Disabled</option_name></option>
+      <option option_id='2'><option_name>Enabled</option_name></option>
+    </feature>
+    <feature feature_id='190' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Intel NIC DMA Channels</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='254' selected_option_id='2' sys_default_option_id='2' feature_type='option'>
+      <feature_name>Asset Tag Protection</feature_name>
+      <option option_id='1'><option_name>Locked</option_name></option>
+      <option option_id='2'><option_name>Unlocked</option_name></option>
+    </feature>
+    <feature feature_id='269' selected_option_id='1' sys_default_option_id='2' feature_type='option'>
+      <feature_name>SR-IOV</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='280' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Memory Channel Mode</feature_name>
+      <option option_id='1'><option_name>Independent Channel Mode (Non-Lockstep)</option_name></option>
+      <option option_id='2'><option_name>Combined Channel Mode (Lockstep)</option_name></option>
+    </feature>
+    <feature feature_id='311' selected_option_id='1' sys_default_option_id='2' feature_type='option'>
+      <feature_name>ACPI SLIT Preferences</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='49' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>ASR Status</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='50' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>ASR Timeout</feature_name>
+      <option option_id='1'><option_name>10 Minutes</option_name></option>
+      <option option_id='2'><option_name>15 Minutes</option_name></option>
+      <option option_id='3'><option_name>20 Minutes</option_name></option>
+      <option option_id='4'><option_name>30 Minutes</option_name></option>
+      <option option_id='5'><option_name>5 Minutes</option_name></option>
+    </feature>
+    <feature feature_id='91' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Thermal Shutdown</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='63' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Wake-On LAN</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='18' selected_option_id='3' sys_default_option_id='3' feature_type='option'>
+      <feature_name>POST F1 Prompt</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+      <option option_id='3'><option_name>Delayed</option_name></option>
+    </feature>
+    <feature feature_id='137' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Power Button</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='136' selected_option_id='3' sys_default_option_id='3' feature_type='option'>
+      <feature_name>Automatic Power-On</feature_name>
+      <option option_id='1'><option_name>Always Power On</option_name></option>
+      <option option_id='2'><option_name>Always Remain Off</option_name></option>
+      <option option_id='3'><option_name>Restore Last Power State</option_name></option>
+    </feature>
+    <feature feature_id='150' selected_option_id='6' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Power-On Delay</feature_name>
+      <option option_id='1'><option_name>No Delay</option_name></option>
+      <option option_id='6'><option_name>Random Delay</option_name></option>
+    </feature>
+    <feature feature_id='100' feature_type='string' string_max_length='29'>
+      <feature_name>Server Name</feature_name>
+      <feature_value>_SERVER_NAME_</feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='102' feature_type='string' string_max_length='33'>
+      <feature_name>Server Asset Tag</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='104' feature_type='string' string_max_length='43'>
+      <feature_name>Server Primary OS</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='106' feature_type='string' string_max_length='29'>
+      <feature_name>Other Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='108' feature_type='string' string_max_length='29'>
+      <feature_name>Admin Name Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='110' feature_type='string' string_max_length='29'>
+      <feature_name>Admin Phone Number Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='112' feature_type='string' string_max_length='29'>
+      <feature_name>Admin Pager Number Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='114' feature_type='string' string_max_length='29'>
+      <feature_name>Other Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='121' feature_type='string' string_max_length='29'>
+      <feature_name>Service Name Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='123' feature_type='string' string_max_length='29'>
+      <feature_name>Service Phone Number Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='117' feature_type='string' string_max_length='29'>
+      <feature_name>Service Pager Number Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='119' feature_type='string' string_max_length='29'>
+      <feature_name>Other Text</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='133' feature_type='string' string_max_length='60'>
+      <feature_name>Custom POST Message</feature_name>
+      <feature_value></feature_value>
+      <feature_value_sys_default></feature_value_sys_default>
+    </feature>
+    <feature feature_id='306' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Intelligent Provisioning (F10 Prompt)</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='145' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>BIOS Serial Console Port</feature_name>
+      <option option_id='1'><option_name>Auto</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+      <option option_id='3'><option_name>COM 1; IRQ4; IO: 3F8h-3FFh</option_name></option>
+      <option option_id='4'><option_name>COM 2; IRQ3; IO: 2F8h-2FFh</option_name></option>
+    </feature>
+    <feature feature_id='146' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>BIOS Serial Console Baud Rate</feature_name>
+      <option option_id='1'><option_name>9600</option_name></option>
+      <option option_id='2'><option_name>19200</option_name></option>
+      <option option_id='3'><option_name>57600</option_name></option>
+      <option option_id='4'><option_name>115200</option_name></option>
+    </feature>
+    <feature feature_id='148' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>EMS Console</feature_name>
+      <option option_id='1'><option_name>Disabled</option_name></option>
+      <option option_id='2'><option_name>COM 1; IRQ4; IO: 3F8h-3FFh</option_name></option>
+      <option option_id='3'><option_name>COM 2; IRQ3; IO: 2F8h-2FFh</option_name></option>
+    </feature>
+    <feature feature_id='149' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+      <feature_name>BIOS Interface Mode</feature_name>
+      <option option_id='1'><option_name>Auto</option_name></option>
+      <option option_id='2'><option_name>Command-Line</option_name></option>
+    </feature>
+    <feature feature_id='43' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Save User Defaults</feature_name>
+      <option option_id='1'><option_name>No, Cancel</option_name></option>
+      <option option_id='2'><option_name>Yes, Save</option_name></option>
+    </feature>
+    <feature feature_id='47' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Erase User Defaults</feature_name>
+      <option option_id='1'><option_name>No, Cancel</option_name></option>
+      <option option_id='2'><option_name>Yes, Erase</option_name></option>
+    </feature>
+    <feature feature_id='210' selected_option_id='3' sys_default_option_id='1' feature_type='option'>
+      <feature_name>HP Power Profile</feature_name>
+      <option option_id='1'><option_name>Balanced Power and Performance</option_name></option>
+      <option option_id='2'><option_name>Minimum Power Usage</option_name></option>
+      <option option_id='3'><option_name>Maximum Performance</option_name></option>
+      <option option_id='4'><option_name>Custom</option_name></option>
+    </feature>
+    <feature feature_id='140' selected_option_id='3' sys_default_option_id='1' feature_type='option'>
+      <feature_name>HP Power Regulator</feature_name>
+      <option option_id='1'><option_name>HP Dynamic Power Savings Mode</option_name></option>
+      <option option_id='2'><option_name>HP Static Low Power Mode</option_name></option>
+      <option option_id='3'><option_name>HP Static High Performance Mode</option_name></option>
+      <option option_id='4'><option_name>OS Control Mode</option_name></option>
+    </feature>
+    <feature feature_id='214' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Redundant Power Supply Mode</feature_name>
+      <option option_id='1'><option_name>Balanced Mode</option_name></option>
+      <option option_id='2'><option_name>High Efficiency Mode (Auto)</option_name></option>
+      <option option_id='3'><option_name>High Efficiency Mode (Odd Supply Standby)</option_name></option>
+      <option option_id='4'><option_name>High Efficiency Mode (Even Supply Standby)</option_name></option>
+    </feature>
+    <feature feature_id='208' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Intel QPI Link Power Management</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='266' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Intel QPI Link Frequency</feature_name>
+      <option option_id='1'><option_name>Auto</option_name></option>
+      <option option_id='2'><option_name>Min QPI Speed</option_name></option>
+    </feature>
+    <feature feature_id='295' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>QPI Bandwidth Optimization (RTID)</feature_name>
+      <option option_id='1'><option_name>Balanced</option_name></option>
+      <option option_id='2'><option_name>Optimized for I/O (Alternate RTID)</option_name></option>
+    </feature>
+    <feature feature_id='204' selected_option_id='4' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Minimum Processor Idle Power Core State</feature_name>
+      <option option_id='1'><option_name>C6 State</option_name></option>
+      <option option_id='2'><option_name>C3 State</option_name></option>
+      <option option_id='3'><option_name>C1E State</option_name></option>
+      <option option_id='4'><option_name>No C-states</option_name></option>
+    </feature>
+    <feature feature_id='247' selected_option_id='3' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Minimum Processor Idle Power Package State</feature_name>
+      <option option_id='2'><option_name>Package C6 (retention) State</option_name></option>
+      <option option_id='1'><option_name>Package C6 (non-retention) State</option_name></option>
+      <option option_id='3'><option_name>No Package State</option_name></option>
+    </feature>
+    <feature feature_id='308' selected_option_id='1' sys_default_option_id='2' feature_type='option'>
+      <feature_name>Energy/Performance Bias</feature_name>
+      <option option_id='1'><option_name>Maximum Performance</option_name></option>
+      <option option_id='2'><option_name>Balanced Performance</option_name></option>
+      <option option_id='3'><option_name>Balanced Power</option_name></option>
+      <option option_id='4'><option_name>Power Savings Mode</option_name></option>
+    </feature>
+    <feature feature_id='159' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Maximum Memory Bus Frequency</feature_name>
+      <option option_id='1'><option_name>Auto</option_name></option>
+      <option option_id='2'><option_name>1867MHz</option_name></option>
+      <option option_id='3'><option_name>1600MHz</option_name></option>
+      <option option_id='4'><option_name>1333MHz</option_name></option>
+      <option option_id='5'><option_name>1066MHz</option_name></option>
+      <option option_id='6'><option_name>800MHz</option_name></option>
+    </feature>
+    <feature feature_id='187' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Channel Interleaving</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='3'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='179' selected_option_id='2' sys_default_option_id='2' feature_type='option'>
+      <feature_name>Maximum PCI Express Speed</feature_name>
+      <option option_id='2'><option_name>Maximum Supported</option_name></option>
+      <option option_id='3'><option_name>PCI-E Generation 1.0</option_name></option>
+    </feature>
+    <feature feature_id='191' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Dynamic Power Savings Mode Response</feature_name>
+      <option option_id='1'><option_name>Fast</option_name></option>
+      <option option_id='2'><option_name>Slow</option_name></option>
+    </feature>
+    <feature feature_id='192' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Collaborative Power Control</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='309' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Dynamic Power Capping Functionality</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='293' selected_option_id='1' sys_default_option_id='2' feature_type='option'>
+      <feature_name>DIMM Voltage Preference</feature_name>
+      <option option_id='1'><option_name>Optimized for Performance</option_name></option>
+      <option option_id='2'><option_name>Optimized for Power</option_name></option>
+    </feature>
+    <feature feature_id='314' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Memory Power Savings Mode</feature_name>
+      <option option_id='1'><option_name>Balanced</option_name></option>
+      <option option_id='2'><option_name>Maximum Performance</option_name></option>
+    </feature>
+    <feature feature_id='199' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Memory Paging Policy</feature_name>
+      <option option_id='1'><option_name>Adaptive Page Open Policy</option_name></option>
+      <option option_id='2'><option_name>Page Closed Policy</option_name></option>
+    </feature>
+    <feature feature_id='212' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Processor Power and Utilization Monitoring</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='72' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Memory Pre-Failure Notification</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='220' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Completion Abort Response</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='291' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Shared Memory Communication</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='294' selected_option_id='2' sys_default_option_id='2' feature_type='option'>
+      <feature_name>Early CLP String Output</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='324' selected_option_id='2' sys_default_option_id='2' feature_type='option'>
+      <feature_name>PCI Express 64-bit BAR Support</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
+    <feature feature_id='323' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>Memory Refresh Rate</feature_name>
+      <option option_id='1'><option_name>1x Refresh</option_name></option>
+      <option option_id='2'><option_name>2x Refresh</option_name></option>
+      <option option_id='3'><option_name>3x Refresh</option_name></option>
+    </feature>
+    <feature feature_id='326' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>NIC Personality Override</feature_name>
+      <option option_id='1'><option_name>Disabled</option_name></option>
+      <option option_id='2'><option_name>Enabled</option_name></option>
+    </feature>
+    <feature feature_id='331' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>AHS PCI Logging</feature_name>
+      <option option_id='1'><option_name>Verbose Logging</option_name></option>
+      <option option_id='2'><option_name>Minimal Logging</option_name></option>
+    </feature>
+</hprcu>
