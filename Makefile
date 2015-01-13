@@ -40,6 +40,9 @@ endef
 all: $(FQDN)
 	@echo 'What could be done, was done ...'
 
+%: %.ipmi %.bios
+	@echo 'Done'
+
 test: util
 
 clean:
@@ -84,12 +87,11 @@ zebra%.cerit-sc.cz.bios: util/asu64
 	$(call asu,bios/zebra.cerit-sc.cz.asu,c-zebra$*a.priv.cerit-sc.cz)
 	$(call asu,bios/zebra.cerit-sc.cz.asu,c-zebra$*b.priv.cerit-sc.cz)
 
-# old HP ProLiant DL980 *G7* requires obsolete 'conrep' tool
-zewura1.cerit-sc.cz zewura2.cerit-sc.cz zewura3.cerit-sc.cz\
-zewura4.cerit-sc.cz zewura5.cerit-sc.cz zewura6.cerit-sc.cz\
-zewura7.cerit-sc.cz zewura8.cerit-sc.cz: bios/zewura.cerit-sc.cz.rbsu
-	@echo 'BIOS setup is manuall process, use BIOS RBSU'
+# zewura, requires obsolete 'conrep' tool
+zewura%.cerit-sc.cz.ipmi:
+	@echo 'iLO setup is manual process'
 	@exit 1
 
-%: %.ipmi %.bios
-	@echo 'Done'
+zewura%.cerit-sc.cz.bios: bios/zewura.cerit-sc.cz.rbsu
+	@echo 'BIOS setup is manual process, use BIOS RBSU'
+	@exit 1
