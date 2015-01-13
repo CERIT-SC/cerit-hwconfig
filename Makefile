@@ -13,7 +13,7 @@ D_IMM_PSWD=PASSW0RD
 D_DRAC_USER=root
 D_DRAC_PSWD=root
 
-include config.mk
+-include config.mk
 
 ###
 
