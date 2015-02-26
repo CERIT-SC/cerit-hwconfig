@@ -73,6 +73,14 @@ fineus%.cerit-sc.cz.ipmi:
 fineus%.cerit-sc.cz.bios: util/hprcu
 	@$(call hprcu,bios/fineus.cerit-sc.cz.xml,$@)
 
+# hda
+hda%.cerit-sc.cz.ipmi:
+	$(call bmc_user_ipmitool,-h c-hda$*.priv.cerit-sc.cz,\
+		${D_IMM_USER},${D_IMM_PSWD})
+
+hda%.cerit-sc.cz.bios: util/asu64
+	$(call asu,bios/hda.cerit-sc.cz.asu,c-hda$*.priv.cerit-sc.cz)
+
 
 # hdb
 hdb%.cerit-sc.cz.ipmi:
