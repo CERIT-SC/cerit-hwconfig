@@ -53,7 +53,7 @@
       <option option_id='1'><option_name>Enabled</option_name></option>
       <option option_id='2'><option_name>Disabled</option_name></option>
     </feature>
-    <feature feature_id='176' selected_option_id='2' sys_default_option_id='1' feature_type='option'>
+    <feature feature_id='176' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
       <feature_name>Intel(R) Hyperthreading Options</feature_name>
       <option option_id='1'><option_name>Enabled</option_name></option>
       <option option_id='2'><option_name>Disabled</option_name></option>
