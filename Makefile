@@ -50,7 +50,7 @@ endef
 
 util/hprcu:
 	mkdir -p util/
-	curl "${URL_HPST}" | tar -C util/ --strip-components=2 \
+	curl --insecure "${URL_HPST}" | tar -C util/ --strip-components=2 \
 		--occurrence=1 --no-anchored -xzvf - hprcu
 	@echo "Download OK: $@"
 
@@ -87,8 +87,8 @@ hdb%.cerit-sc.cz.ipmi:
 	@echo 'iLO setup TODO'
 	@exit 1
 
-hdb%.cerit-sc.cz.bios: util/hprcu
-	@$(call hprcu,bios/hdb.cerit-sc.cz.xml,$@)
+hdb%.priv.cerit-sc.cz.bios: util/hprcu
+	@$(call hprcu,bios/hdb.cerit-sc.cz.xml,hdb$*.priv.cerit-sc.cz)
 
 
 # hdc
@@ -96,8 +96,8 @@ hdc%.cerit-sc.cz.ipmi:
 	@echo 'iLO setup TODO'
 	@exit 1
 
-hdc%.cerit-sc.cz.bios: util/hprcu
-	@$(call hprcu,bios/hdc.cerit-sc.cz.xml,$@)
+hdc%.priv.cerit-sc.cz.bios: util/hprcu
+	@$(call hprcu,bios/hdc.cerit-sc.cz.xml,hdc$*.priv.cerit-sc.cz)
 
 
 # zebra
