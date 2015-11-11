@@ -43,6 +43,11 @@
       <option option_id='2'><option_name>Internal DriveKeys First</option_name></option>
       <option option_id='3'><option_name>External DriveKeys First</option_name></option>
     </feature>
+    <feature feature_id='337' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
+      <feature_name>USB Drive Key Enumeration</feature_name>
+      <option option_id='1'><option_name>Enabled</option_name></option>
+      <option option_id='2'><option_name>Disabled</option_name></option>
+    </feature>
     <feature feature_id='135' selected_option_id='1' sys_default_option_id='1' feature_type='option'>
       <feature_name>No-Execute Memory Protection</feature_name>
       <option option_id='1'><option_name>Enabled</option_name></option>
@@ -248,6 +253,10 @@
     <feature feature_id='150' selected_option_id='6' sys_default_option_id='1' feature_type='option'>
       <feature_name>Power-On Delay</feature_name>
       <option option_id='1'><option_name>No Delay</option_name></option>
+      <option option_id='2'><option_name>15 Second Delay</option_name></option>
+      <option option_id='3'><option_name>30 Second Delay</option_name></option>
+      <option option_id='4'><option_name>45 Second Delay</option_name></option>
+      <option option_id='5'><option_name>60 Second Delay</option_name></option>
       <option option_id='6'><option_name>Random Delay</option_name></option>
     </feature>
     <feature feature_id='100' feature_type='string' string_max_length='29'>
