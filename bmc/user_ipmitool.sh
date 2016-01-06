@@ -64,7 +64,7 @@ ipmi() {
 IPMI_C="ipmi $D_USER $D_PSWD"
 
 # check connection
-echo '* Check for IPMI connection'
+echo '* Checking IPMI connection'
 $IPMI_C 'mc info' &>/dev/null || {
 	IPMI_C="ipmi $USER $PSWD"
 	$IPMI_C 'mc info' >/dev/null || \
@@ -72,7 +72,7 @@ $IPMI_C 'mc info' &>/dev/null || {
 }
 
 # configure new user 
-echo "* Checking for user '${USER}'"
+echo "* Checking user '${USER}'"
 MY_USER_ID=`$IPMI_C "user list 1" | awk -F, "tolower(\\$2) == tolower(\"${USER}\") { print \\$1 }"`
 if [ "x${MY_USER_ID}" == 'x' ]; then
 	echo "  * Creating"
@@ -95,7 +95,6 @@ $IPMI_C "user test $MY_USER_ID 16 $PSWD" &>/dev/null || {
 
 	set -e
 	$IPMI_C "user set password $MY_USER_ID $PSWD"
-	$IPMI_C "user test $MY_USER_ID 16 $PSWD" >/dev/null
 	set +e
 }
 
