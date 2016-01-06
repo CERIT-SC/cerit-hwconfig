@@ -12,6 +12,8 @@ D_IMM_USER=USERID
 D_IMM_PSWD=PASSW0RD
 D_DRAC_USER=root
 D_DRAC_PSWD=root
+D_SMC_USER=ADMIN
+D_SMC_PSWD=ADMIN
 
 -include config.mk
 
@@ -119,4 +121,13 @@ zewura%.cerit-sc.cz.ipmi:
 
 zewura%.cerit-sc.cz.bios: bios/zewura.cerit-sc.cz.rbsu
 	@echo 'BIOS setup is manual process, use BIOS RBSU'
+	@exit 1
+
+# zanzub
+zanzub%.priv.cerit-sc.cz.ipmi:
+	$(call bmc_user_ipmitool,-h c-zanzub$*.priv.cerit-sc.cz,\
+		${D_SMC_USER},${D_SMC_PSWD})
+
+zanzub%.priv.cerit-sc.cz.bios:
+	@echo 'BIOS setup is manual process, use serial console'
 	@exit 1
