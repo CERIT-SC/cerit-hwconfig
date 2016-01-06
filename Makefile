@@ -7,6 +7,9 @@ URL_HPST=https://ftp.hp.com/pub/softlib2/software1/pubsw-linux/p1221080004/v8436
 #URL_ASU=https://delivery04.dhe.ibm.com/sar/CMA/XSA/04sjw/0/ibm_utl_asu_asut86d-9.63_linux_i386.tgz
 URL_ASU=https://delivery04.dhe.ibm.com/sar/CMA/XSA/04sjz/0/ibm_utl_asu_asut86d-9.63_linux_x86-64.tgz
 
+# Supermicro SMCIPMITool
+URL_SMC=ftp://ftp.supermicro.com/utility/SMCIPMItool/Linux/SMCIPMITool_2.14.0_bundleJRE_Linux_x64_20150909.tar.gz
+
 # IPMI/IMM/iDRAC defaults
 D_IMM_USER=USERID
 D_IMM_PSWD=PASSW0RD
@@ -63,7 +66,13 @@ util/asu64:
 		asu64
 	@echo "Download OK: $@"
 
-util: util/hprcu util/asu64
+util/SMCIPMITool:
+	mkdir -p util/
+	curl --insecure "${URL_SMC}" | tar -C util/ --strip-components=1 \
+		-xzvf -
+	@echo "Download OK: $@"
+
+util: util/hprcu util/asu64 util/SMCIPMITool
 
 ### Machines
 
