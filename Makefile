@@ -46,6 +46,10 @@ define bmc_user_ipmitool
 		-U ${IPMI_USER} -P ${IPMI_PSWD}
 endef
 
+define ipmitool_lanplus
+	ipmitool -H $1 -U ${IPMI_USER} -P ${IPMI_PSWD} -I lanplus $2
+endef
+
 define asu
 	util/asu64 batch $1 \
 		--host $2 \
@@ -71,6 +75,11 @@ util/SMCIPMITool:
 	curl --insecure "${URL_SMC}" | tar -C util/ --strip-components=1 \
 		-xzvf -
 	@echo "Download OK: $@"
+
+util/sum:
+	@echo 'You have to get Supermicro Update Manager (SUM) via'
+	@echo 'https://www.supermicro.com/solutions/SMS_SUM.cfm'
+	@exit 1
 
 util: util/hprcu util/asu64 util/SMCIPMITool
 
@@ -132,11 +141,17 @@ zewura%.cerit-sc.cz.bios: bios/zewura.cerit-sc.cz.rbsu
 	@echo 'BIOS setup is manual process, use BIOS RBSU'
 	@exit 1
 
-# zanzub
-zanzub%.priv.cerit-sc.cz.ipmi:
-	$(call bmc_user_ipmitool,-h c-zanzub$*.priv.cerit-sc.cz,\
+# zefron
+zefron%.priv.cerit-sc.cz.ipmi:
+	$(call bmc_user_ipmitool,-h c-zefron$*.priv.cerit-sc.cz,\
 		${D_SMC_USER},${D_SMC_PSWD})
+# LAN Interface: 0=Dedicate, 1=Shared, 2=Failover
+	$(call ipmitool_lanplus,c-zefron$*.priv.cerit-sc.cz,\
+		raw 0x30 0x70 0x0c 0x1 0x0)
+# FAN: 1=Full, 2=Optimal, 3=PUE2, 4=HeavyIO
+	$(call ipmitool_lanplus,c-zefron$*.priv.cerit-sc.cz,\
+		raw 0x30 0x45 0x1 0x2)
 
-zanzub%.priv.cerit-sc.cz.bios:
+zefron%.priv.cerit-sc.cz.bios:
 	@echo 'BIOS setup is manual process, use serial console'
 	@exit 1
