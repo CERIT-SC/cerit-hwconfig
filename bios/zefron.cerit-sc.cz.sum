@@ -1,0 +1,256 @@
+#Please refer to SUM User's guide '4.1 Format of BIOS Settings Text File' for usage.
+
+[Advanced|Boot Feature]
+Quiet Boot=01                           // Please enter the value in 2 hexadecimal digits. Default value is <<<01>>>        
+AddOn ROM Display Mode=01               // *01 (Force BIOS), 00 (Keep Current)        
+Bootup NumLock State=01                 // *01 (On), 00 (Off)        
+Wait For "F1" If Error=01               // 00 (Disabled), *01 (Enabled)        
+Interrupt 19 Capture=01                 // *01 (Immediate), 00 (Postponed)        
+Re-try Boot=00                          // *00 (Disabled), 01 (Legacy Boot), 02 (EFI Boot)        
+Watch Dog Function=00                   // *00 (Disabled), 01 (Enabled)        
+Power Button Function=00                // *00 (Instant Off), 01 (4 Seconds Override)        
+Restore on AC Power Loss=02             // 00 (Power On), 01 (Stay Off), *02 (Last State)        
+
+[Advanced|CPU Configuration]
+Clock Spread Spectrum=00                // *00 (Disable), 01 (Enable)        
+Hyper-Threading (ALL)=00                // 01 (Disable), *00 (Enable)        
+Cores Enabled=00                        // Please enter the value in 2 hexadecimal digits. Default value is <<<00>>>        
+Execute Disable Bit=01                  // 00 (Disable), *01 (Enable)        
+PPIN Control=01                         // 00 (Unlock/Disable), *01 (Unlock/Enable)        
+Hardware Prefetcher=01                  // *01 (Enable), 00 (Disable)        
+Adjacent Cache Prefetch=01              // *01 (Enable), 00 (Disable)        
+DCU Streamer Prefetcher=01              // *01 (Enable), 00 (Disable)        
+DCU IP Prefetcher=01                    // *01 (Enable), 00 (Disable)        
+Direct Cache Access (DCA)=02            // 00 (Disable), 01 (Enable), *02 (Auto)        
+X2APIC=00                               // *00 (Disable), 01 (Enable)        
+AES-NI=01                               // 00 (Disable), *01 (Enable)        
+Intel Virtualization Technology=01      // 00 (Disable), *01 (Enable)        
+
+[Advanced|CPU Configuration|Advanced Power Management Configuration]
+Power Technology=01                     // 00 (Disable), *01 (Energy Efficient), 02 (Custom)        
+Energy Performance Tuning=01            // 00 (Enable), *01 (Disable)        
+Energy Performance BIAS Setting=07      // 00 (Performance), *07 (Balanced Performance), 08 (Balanced Power), 0F (Power)        
+Energy Efficient Turbo=00               // *00 (Enable), 01 (Disable)        
+
+[Advanced|CPU Configuration|Advanced Power Management Configuration|CPU P State Control]
+EIST (P-States)=01                      // 00 (Disable), *01 (Enable)        
+Turbo Mode=01                           // 00 (Disable), *01 (Enable)        
+P-state Coordination=00                 // *00 (HW_ALL), 01 (SW_ALL), 02 (SW_ANY)        
+
+[Advanced|CPU Configuration|Advanced Power Management Configuration|CPU C State Control]
+Package C State Limit=03                // 00 (C0/C1 state), 01 (C2 state), 02 (C6(non Retention) state), *03 (C6(Retention) state), 07 (No Limit)        
+CPU C3 Report=00                        // *00 (Disable), 01 (Enable)        
+CPU C6 Report=01                        // 00 (Disable), *01 (Enable)        
+Enhanced Halt State (C1E)=01            // 00 (Disable), *01 (Enable)        
+
+[Advanced|CPU Configuration|Advanced Power Management Configuration|CPU T State Control]
+ACPI T-States=01                        // 00 (Disable), *01 (Enable)        
+
+[Advanced|Chipset Configuration|North Bridge|IIO Configuration]
+EV DFX Features=00                      // *00 (Disable), 01 (Enable)        
+
+[Advanced|Chipset Configuration|North Bridge|IIO Configuration|IOAT Configuration]
+Enable IOAT=01                          // 00 (Disable), *01 (Enable)        
+No Snoop=00                             // *00 (Disable), 01 (Enable)        
+Relaxed Ordering=00                     // *00 (Disable), 01 (Enable)        
+
+[Advanced|Chipset Configuration|North Bridge|IIO Configuration|Intel VT for Directed I/O (VT-d)]
+Intel VT for Directed I/O (VT-d)=01     // *01 (Enable), 00 (Disable)        
+Interrupt Remapping=01                  // *01 (Enable), 00 (Disable)        
+
+[Advanced|Chipset Configuration|North Bridge|QPI Configuration|QPI General Configuration]
+Link Frequency Select=06                // 01 (6.4GB/s), 03 (8.0GB/s), 05 (9.6GB/s), *06 (Auto), 07 (Auto Limited)        
+Link L0p Enable=01                      // 00 (Disable), *01 (Enable)        
+Link L1 Enable=01                       // 00 (Disable), *01 (Enable)        
+COD Enable=00                           // *00 (Disable), 01 (Enable)        
+Early Snoop=02                          // 00 (Disable), 01 (Enable), *02 (Auto)        
+Isoc Mode=00                            // *00 (Disable), 01 (Enable)        
+
+[Advanced|Chipset Configuration|North Bridge|Memory Configuration]
+Enforce POR=00                          // *00 (Enabled), 02 (Disabled)        
+Memory Frequency=00                     // *00 (Auto), 05 (1333), 06 (1400), 07 (1600), 08 (1800), 09 (1867), 0A (2000), 0B (2133), 0C (2200), 0D (2400), 0E (2600), 0F (2667), 10 (2800), 11 (2993), 12 (3000), 13 (3200), 01 (Reserved), 02 (Reserved), 03 (Reserved), 04 (Reserved)        
+Data Scrambling=02                      // *02 (Auto), 00 (Disabled), 01 (Enabled)        
+Enable ADR=00                           // *00 (Disabled), 01 (Enabled)        
+Check PCH_PM_STS=00                     // *00 (Disabled), 01 (Enabled)        
+Check PlatformDetectADR=00              // *00 (Disabled), 01 (Enabled)        
+DRAM RAPL Baseline=02                   // 00 (Disable), 01 (DRAM RAPL Mode 0), *02 (DRAM RAPL Mode 1)        
+Set Throttling Mode=02                  // 00 (Disabled), *02 (CLTT)        
+Socket Interleave Below 4GB=00          // *00 (Disable), 01 (Enable)        
+A7 Mode=01                              // 00 (Disable), *01 (Enable)        
+
+[Advanced|Chipset Configuration|North Bridge|Memory Configuration|Memory RAS Configuration]
+RAS Mode=00                             // *00 (Disable), 01 (Mirror), 02 (Lockstep Mode)        
+Memory Rank Sparing=00                  // *00 (Disabled), 01 (Enabled)        
+Multi Rank Sparing=04                   // 01 (One Rank), 02 (Two Rank), 03 (Three Rank), *04 (Auto)        
+Patrol Scrub=01                         // 00 (Disable), *01 (Enable)        
+Patrol Scrub Interval=18                // Please enter the value in 2 hexadecimal digits. Default value is <<<18>>>        
+Demand Scrub=01                         // 00 (Disable), *01 (Enable)        
+Device Tagging=00                       // *00 (Disable), 01 (Enable)        
+
+[Advanced|Chipset Configuration|South Bridge]
+Legacy USB Support=00                   // *00 (Enabled), 01 (Disabled), 02 (Auto)        
+XHCI Hand-off=01                        // *01 (Enabled), 00 (Disabled)        
+EHCI Hand-off=00                        // *00 (Disabled), 01 (Enabled)        
+Port 60/64 Emulation=01                 // 00 (Disabled), *01 (Enabled)        
+USB 3.0 Support=02                      // 03 (Smart Auto), *02 (Auto), 01 (Enabled), 00 (Disabled)        
+EHCI1=01                                // 00 (Disabled), *01 (Enabled)        
+EHCI2=01                                // 00 (Disabled), *01 (Enabled)        
+XHCI Pre-Boot Driver=01                 // *01 (Enabled), 00 (Disabled)        
+XHCI Idle L1=01                         // *01 (Enabled), 00 (Disabled)        
+
+[Advanced|SATA Configuration]
+SATA Controller=01                      // 00 (Disabled), *01 (Enabled)        
+Configure SATA as=01                    // 00 (IDE), *01 (AHCI), 02 (RAID)        
+Support Aggressive Link Power Management for SATA=01// 00 (Disabled), *01 (Enabled)        
+SATA RAID Option ROM/UEFI Driver=02     // *02 (Legacy), 01 (EFI), 00 (Disabled)        
+SATA0 Hot Plug=01                       // 00 (Disabled), *01 (Enabled)        
+SATA0 Spin Up Device=00                 // *00 (Disabled), 01 (Enabled)        
+SATA0 Device Type=00                    // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+SATA1 Hot Plug=01                       // 00 (Disabled), *01 (Enabled)        
+SATA1 Spin Up Device=00                 // *00 (Disabled), 01 (Enabled)        
+SATA1 Device Type=00                    // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+SATA2 Hot Plug=01                       // 00 (Disabled), *01 (Enabled)        
+SATA2 Spin Up Device=00                 // *00 (Disabled), 01 (Enabled)        
+SATA2 Device Type=00                    // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+SATA3 Hot Plug=01                       // 00 (Disabled), *01 (Enabled)        
+SATA3 Spin Up Device=00                 // *00 (Disabled), 01 (Enabled)        
+SATA3 Device Type=00                    // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+SATA4 Hot Plug=01                       // 00 (Disabled), *01 (Enabled)        
+SATA4 Spin Up Device=00                 // *00 (Disabled), 01 (Enabled)        
+SATA4 Device Type=00                    // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+SATA5 Hot Plug=01                       // 00 (Disabled), *01 (Enabled)        
+SATA5 Spin Up Device=00                 // *00 (Disabled), 01 (Enabled)        
+SATA5 Device Type=00                    // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+
+[Advanced|sSATA Configuration]
+sSATA Controller=01                     // *01 (Enabled), 00 (Disabled)        
+Configure sSATA as=01                   // 00 (IDE), *01 (AHCI), 02 (RAID)        
+Support Aggressive Link Power Management for sSATA=01// 00 (Disabled), *01 (Enabled)        
+sSATA RAID Option ROM/UEFI Driver=02    // *02 (Legacy), 01 (EFI), 00 (Disabled)        
+SATA/sSATA RAID Boot Select=01          // 03 (None), 02 (SATA Controller), *01 (sSATA Controller), 00 (Both)        
+sSATA0 Hot Plug=01                      // 00 (Disabled), *01 (Enabled)        
+sSATA0 Spin Up Device=00                // *00 (Disabled), 01 (Enabled)        
+sSATA0 Device Type=00                   // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+sSATA1 Hot Plug=01                      // 00 (Disabled), *01 (Enabled)        
+sSATA1 Spin Up Device=00                // *00 (Disabled), 01 (Enabled)        
+sSATA1 Device Type=00                   // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+sSATA2 Hot Plug=01                      // 00 (Disabled), *01 (Enabled)        
+sSATA2 Spin Up Device=00                // *00 (Disabled), 01 (Enabled)        
+sSATA2 Device Type=00                   // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+sSATA3 Hot Plug=01                      // 00 (Disabled), *01 (Enabled)        
+sSATA3 Spin Up Device=00                // *00 (Disabled), 01 (Enabled)        
+sSATA3 Device Type=00                   // *00 (Hard Disk Drive), 01 (Solid State Drive)        
+
+[Advanced|PCIe/PCI/PnP Configuration]
+PCI Latency Timer=20                    // *20 (32 PCI Bus Clocks), 40 (64 PCI Bus Clocks), 60 (96 PCI Bus Clocks), 80 (128 PCI Bus Clocks), A0 (160 PCI Bus Clocks), C0 (192 PCI Bus Clocks), E0 (224 PCI Bus Clocks), F8 (248 PCI Bus Clocks)        
+PERR# Generation=00                     // *00 (Disabled), 01 (Enabled)        
+SERR# Generation=00                     // *00 (Disabled), 01 (Enabled)        
+PCI PERR/SERR Support=00                // *00 (Disabled), 01 (Enabled)        
+Above 4G Decoding=00                    // *00 (Disabled), 01 (Enabled)        
+SR-IOV Support=00                       // *00 (Disabled), 01 (Enabled)        
+Maximum Payload=37                      // *37 (Auto), 00 (128 Bytes), 01 (256 Bytes), 02 (512 Bytes), 03 (1024 Bytes), 04 (2048 Bytes), 05 (4096 Bytes)        
+Maximum Read Request=37                 // *37 (Auto), 00 (128 Bytes), 01 (256 Bytes), 02 (512 Bytes), 03 (1024 Bytes), 04 (2048 Bytes), 05 (4096 Bytes)        
+ASPM Support=00                         // *00 (Disabled), 37 (Auto)        
+MMIOHBase=00000000                      // *00000000 (56T), 00000001 (48T), 00000002 (24T), 00000003 (2T), 00000004 (512G), 00000005 (256G)        
+MMIO High Size=00000000                 // *00000000 (256G), 00000001 (128G), 00000002 (512G), 00000003 (1024G)        
+PCIe Hot Plug=01                        // 00 (Disabled), *01 (Enabled)        
+PCI / PCIX / PCIe Slot 3 OPROM=02       // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 5 OPROM=02       // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 7 OPROM=02       // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 9 OPROM=02       // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 1 OPROM=02       // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 13 OPROM=02      // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 15 OPROM=02      // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 17 OPROM=02      // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 19 OPROM=02      // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 23 OPROM=02      // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 25 OPROM=02      // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 33 OPROM=02      // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+PCI / PCIX / PCIe Slot 35 OPROM=02      // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+Onboard Video OPROM=02                  // 00 (Disabled), *02 (Legacy), 01 (EFI)        
+VGA Priority=01                         // *01 (Onboard), 02 (Offboard)        
+Onboard LAN Option ROM Type=02          // *02 (Legacy), 01 (EFI)        
+Onboard LAN 1 OPROM=01                  // *01 (PXE), 02 (iSCSI), 03 (FCoE), 00 (Disabled)        
+Network Stack=00                        // *00 (Disabled), 01 (Enabled)        
+Ipv4 PXE Support=01                     // 00 (Disabled), *01 (Enabled)        
+Ipv6 PXE Support=00                     // *00 (Disabled), 01 (Enabled)        
+PXE boot wait time=00                   // Please enter the value in 2 hexadecimal digits. Default value is <<<00>>>        
+
+[Advanced|Super IO Configuration|Serial Port 1 Configuration]
+COM1 Serial Port=01                     // Please enter the value in 2 hexadecimal digits. Default value is <<<01>>>        
+COM1 Change Settings=00                 // *00 (Auto), 01 (IO=3F8h; IRQ=4;), 02 (IO=3F8h; IRQ=3,4,5,6,7,10,11,12;), 03 (IO=2F8h; IRQ=3,4,5,6,7,10,11,12;), 04 (IO=3E8h; IRQ=3,4,5,6,7,10,11,12;), 05 (IO=2E8h; IRQ=3,4,5,6,7,10,11,12;)        
+COM1 Device Mode=00                     // *00 (24MHz/13), 01 (24MHz)        
+
+[Advanced|Super IO Configuration|Serial Port 2 Configuration]
+COM2/SOL Serial Port=01                 // Please enter the value in 2 hexadecimal digits. Default value is <<<01>>>        
+COM2/SOL Change Settings=00             // *00 (Auto), 01 (IO=2F8h; IRQ=3;), 02 (IO=3F8h; IRQ=3,4,5,6,7,10,11,12;), 03 (IO=2F8h; IRQ=3,4,5,6,7,10,11,12;), 04 (IO=3E8h; IRQ=3,4,5,6,7,10,11,12;), 05 (IO=2E8h; IRQ=3,4,5,6,7,10,11,12;)        
+COM2/SOL Device Mode=00                 // *00 (24MHz/13), 01 (24MHz)        
+Serial Port 2 Attribute=03              // *03 (SOL), 01 (COM)        
+
+[Advanced|Serial Port Console Redirection]
+COM1 Console Redirection=00             // Please enter the value in 2 hexadecimal digits. Default value is <<<00>>>        
+COM2/SOL Console Redirection=01         // Please enter the value in 2 hexadecimal digits. Default value is <<<01>>>        
+EMS Console Redirection=00              // Please enter the value in 2 hexadecimal digits. Default value is <<<00>>>        
+
+[Advanced|ACPI Settings]
+WHEA Support=01                         // 00 (Disabled), *01 (Enabled)        
+High Precision Timer=01                 // 00 (Disabled), *01 (Enabled)        
+NUMA=01                                 // 00 (Disabled), *01 (Enabled)        
+PCI AER Support=00                      // *00 (Disabled), 01 (Enabled)        
+
+[Advanced|Trusted Computing]
+Security Device Support=01              // 00 (Disabled), *01 (Enabled)        
+TPM State=00                            // *00 (Disabled), 01 (Enabled)        
+Pending Operation=00                    // *00 (None), 08 (Enable Take Ownership), 09 (Disable Take Ownership), 05 (TPM Clear)        
+TXT Support=00                          // *00 (Disabled), 01 (Enabled)        
+
+[Event Logs|Change Smbios Event Log Settings]
+Smbios Event Log=01                     // 00 (Disabled), *01 (Enabled)        
+Runtime Error Logging Support=01        // 00 (Disabled), *01 (Enabled)        
+Memory Corrected Error Enabling=00      // *00 (Disabled), 01 (Enabled)        
+PCI-Ex Error Enable=00                  // *00 (Disabled), 01 (Enabled)        
+Memory Corr. Error Threshold=000A       // Please enter the value in 4 hexadecimal digits. Default value is <<<000A>>>        
+Erase Event Log=00                      // *00 (No), 01 (Yes, Next reset), 02 (Yes, Every reset)        
+When Log is Full=00                     // *00 (Do Nothing), 01 (Erase Immediately)        
+Log System Boot Event=00                // 01 (Enabled), *00 (Disabled)        
+MECI=01                                 // Please enter the value in 2 hexadecimal digits. Default value is <<<01>>>        
+METW=3C                                 // Please enter the value in 2 hexadecimal digits. Default value is <<<3C>>>        
+
+[IPMI|System Event Log]
+SEL Components=01                       // 00 (Disabled), *01 (Enabled)        
+Erase SEL=00                            // *00 (No), 01 (Yes, On next reset), 02 (Yes, On every reset)        
+When SEL is Full=00                     // *00 (Do Nothing), 01 (Erase Immediately)        
+Log EFI Status Codes=02                 // 00 (Disabled), 01 (Both), *02 (Error code), 03 (Progress code)        
+
+[Boot]
+Boot Mode Select=02                     // 00 (LEGACY), 01 (UEFI), *02 (DUAL)        
+UEFI Boot Order #1=0000                 // *0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (UEFI AP), 0008 (Disabled)        Boot Mode Select = "UEFI"
+UEFI Boot Order #2=0001                 // 0000 (Hard Disk), *0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (UEFI AP), 0008 (Disabled)        Boot Mode Select = "UEFI"
+UEFI Boot Order #3=0002                 // 0000 (Hard Disk), 0001 (CD/DVD), *0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (UEFI AP), 0008 (Disabled)        Boot Mode Select = "UEFI"
+UEFI Boot Order #4=0003                 // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), *0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (UEFI AP), 0008 (Disabled)        Boot Mode Select = "UEFI"
+UEFI Boot Order #5=0004                 // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), *0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (UEFI AP), 0008 (Disabled)        Boot Mode Select = "UEFI"
+UEFI Boot Order #6=0005                 // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), *0005 (USB Floppy), 0006 (Network), 0007 (UEFI AP), 0008 (Disabled)        Boot Mode Select = "UEFI"
+UEFI Boot Order #7=0006                 // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), *0006 (Network), 0007 (UEFI AP), 0008 (Disabled)        Boot Mode Select = "UEFI"
+UEFI Boot Order #8=0007                 // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), *0007 (UEFI AP), 0008 (Disabled)        Boot Mode Select = "UEFI"
+Legacy Boot Order #1=0000               // *0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (Disabled)        Boot Mode Select = "LEGACY"
+Legacy Boot Order #2=0001               // 0000 (Hard Disk), *0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (Disabled)        Boot Mode Select = "LEGACY"
+Legacy Boot Order #3=0002               // 0000 (Hard Disk), 0001 (CD/DVD), *0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (Disabled)        Boot Mode Select = "LEGACY"
+Legacy Boot Order #4=0003               // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), *0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (Disabled)        Boot Mode Select = "LEGACY"
+Legacy Boot Order #5=0004               // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), *0004 (USB Key), 0005 (USB Floppy), 0006 (Network), 0007 (Disabled)        Boot Mode Select = "LEGACY"
+Legacy Boot Order #6=0005               // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), *0005 (USB Floppy), 0006 (Network), 0007 (Disabled)        Boot Mode Select = "LEGACY"
+Legacy Boot Order #7=0006               // 0000 (Hard Disk), 0001 (CD/DVD), 0002 (USB Hard Disk), 0003 (USB CD/DVD), 0004 (USB Key), 0005 (USB Floppy), *0006 (Network), 0007 (Disabled)        Boot Mode Select = "LEGACY"
+Dual Boot Order #1=0008                 // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), *0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #2=0009                 // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), *0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #3=000A                 // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), *000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #4=000B                 // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), *000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #5=000C                 // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), *000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #6=000D                 // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), *000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #7=000E                 // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), *000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #8=0000                 // *0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #9=0001                 // 0000 (UEFI Hard Disk), *0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #10=0002                // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), *0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #11=0003                // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), *0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #12=0004                // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), *0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #13=0005                // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), *0005 (UEFI USB Floppy), 0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #14=0006                // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), *0006 (UEFI Network), 0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
+Dual Boot Order #15=0007                // 0000 (UEFI Hard Disk), 0001 (UEFI CD/DVD), 0002 (UEFI USB Hard Disk), 0003 (UEFI USB CD/DVD), 0004 (UEFI USB Key), 0005 (UEFI USB Floppy), 0006 (UEFI Network), *0007 (UEFI AP), 0008 (Hard Disk), 0009 (CD/DVD), 000A (USB Hard Disk), 000B (USB CD/DVD), 000C (USB Key), 000D (USB Floppy), 000E (Network), 000F (Disabled)        Boot Mode Select = "DUAL"
