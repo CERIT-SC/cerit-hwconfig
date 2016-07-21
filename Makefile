@@ -56,21 +56,15 @@ endef
 
 util/hprcu:
 	mkdir -p util/
-	curl --insecure "${URL_HPST}" | tar -C util/ --strip-components=2 \
-		--occurrence=1 --no-anchored -xzvf - hprcu
+	curl --location --insecure "${URL_HPST}" | \
+		tar -C util/ --strip-components=2 --occurrence=1 --no-anchored -xzvf - hprcu
 	@echo "Download OK: $@"
 
 util/asu64:
 	mkdir -p util/
-	curl "${URL_ASU}" | tar -C util/ \
-		--occurrence=1 --no-anchored -xzv \
-		asu64
+	curl --location "${URL_ASU}" | \
+		tar -C util/ --occurrence=1 --no-anchored -xzv asu64
 	@echo "Download OK: $@"
-
-util/sum:
-	@echo 'You have to get Supermicro Update Manager (SUM) via'
-	@echo 'https://www.supermicro.com/solutions/SMS_SUM.cfm'
-	@exit 1
 
 util: util/hprcu util/asu64
 
