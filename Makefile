@@ -85,16 +85,16 @@ fineus%.cerit-sc.cz.bios: util/hprcu
 	@$(call hprcu,bios/fineus.cerit-sc.cz.xml,$@)
 
 # hda
-hda%.cerit-sc.cz.ipmi:
+hda%.priv.cerit-sc.cz.ipmi:
 	$(call bmc_user_ipmitool,-h c-hda$*.priv.cerit-sc.cz,\
 		${D_IMM_USER},${D_IMM_PSWD})
 
-hda%.cerit-sc.cz.bios: util/asu64
+hda%.priv.cerit-sc.cz.bios: util/asu64
 	$(call asu,bios/hda.cerit-sc.cz.asu,c-hda$*.priv.cerit-sc.cz)
 
 
 # hdb
-hdb%.cerit-sc.cz.ipmi:
+hdb%.priv.cerit-sc.cz.ipmi:
 	@echo 'iLO setup TODO'
 	@exit 1
 
@@ -103,7 +103,7 @@ hdb%.priv.cerit-sc.cz.bios: util/hprcu
 
 
 # hdc
-hdc%.cerit-sc.cz.ipmi:
+hdc%.priv.cerit-sc.cz.ipmi:
 	@echo 'iLO setup TODO'
 	@exit 1
 
@@ -112,13 +112,13 @@ hdc%.priv.cerit-sc.cz.bios: util/hprcu
 
 
 # zebra
-zebra%.cerit-sc.cz.ipmi:
+zebra%.priv.cerit-sc.cz.ipmi:
 	$(call bmc_user_ipmitool,-h c-zebra$*a.priv.cerit-sc.cz,\
 		${D_IMM_USER},${D_IMM_PSWD})
 	$(call bmc_user_ipmitool,-h c-zebra$*b.priv.cerit-sc.cz,\
 		${D_IMM_USER},${D_IMM_PSWD})
 
-zebra%.cerit-sc.cz.bios: util/asu64
+zebra%.priv.cerit-sc.cz.bios: util/asu64
 	$(call asu,bios/zebra.cerit-sc.cz.asu,c-zebra$*a.priv.cerit-sc.cz)
 	$(call asu,bios/zebra.cerit-sc.cz.asu,c-zebra$*b.priv.cerit-sc.cz)
 
