@@ -140,3 +140,11 @@ zefron%.priv.cerit-sc.cz.ipmi:
 zefron%.priv.cerit-sc.cz.bios:
 	@echo 'BIOS setup is manual process, use serial console'
 	@exit 1
+
+# zorg
+zorg.priv.cerit-sc.cz.ipmi:
+	$(call bmc_user_ipmitool,-h c-zorg.priv.cerit-sc.cz,\
+		${D_IMM_USER},${D_IMM_PSWD})
+
+zorg.priv.cerit-sc.cz.bios: util/asu64
+	$(call asu,bios/zorg.priv.cerit-sc.cz.asu,c-zorg.priv.cerit-sc.cz)

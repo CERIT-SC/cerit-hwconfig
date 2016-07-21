@@ -1,0 +1,20 @@
+loaddefault uEFI
+loaddefault BootOrder
+set IMM.IPv6Network1 "Disabled"
+set IMM.ThermalModePolicy "Performance"
+set OperatingModes.ChooseOperatingMode "Maximum Performance"
+set Processors.Hyper-Threading "Enable"
+set Processors.EnableSMX "Enable"
+set DevicesandIOPorts.RemoteConsole "Enable"
+set DevicesandIOPorts.SerialPortSharing "Enable"
+set DevicesandIOPorts.SerialPortAccessMode "Dedicated"
+set DevicesandIOPorts.SPRedirection "Enable"
+set DevicesandIOPorts.Com1ActiveAfterBoot "Enable"
+set DevicesandIOPorts.Com1FlowControl "Hardware"
+set DevicesandIOPorts.Com2ActiveAfterBoot "Enable"
+set Memory.MemoryMode "Independent"
+set BroadcomNetXtremeII10GbEthernetBCM57810-000AF7263F90.VirtualizationMode "SR-IOV (pNIC + SR-IOV)"
+set BootModes.SystemBootMode "Legacy Mode"
+set BootModes.QuietBoot "Disabled"
+set BootOrder.BootOrder "Legacy Only"
+
