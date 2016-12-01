@@ -1,7 +1,7 @@
 FQDN=$(shell hostname -f)
 
 # HP Scripting Toolkit for Linux 9.50
-URL_HPST=https://ftp.hp.com/pub/softlib2/software1/pubsw-linux/p1221080004/v84368/hp-scripting-toolkit-linux-9.50.tar.gz
+URL_HPST=https://downloads.hpe.com/pub/softlib2/software1/pubsw-linux/p1221080004/v84368/hp-scripting-toolkit-linux-9.50.tar.gz
 
 # IBM Advanced Settings Utility 9.63
 #URL_ASU=https://delivery04.dhe.ibm.com/sar/CMA/XSA/04sjw/0/ibm_utl_asu_asut86d-9.63_linux_i386.tgz
